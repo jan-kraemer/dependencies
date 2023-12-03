@@ -1,0 +1,19 @@
+plugins {
+    id 'maven-publish'
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'de.kraemer.jan'
+version = '0.0.1-SNAPSHOT'
+
+dependencyManagement {
+    dependencies {
+        dependency 'com.google.guava:guava:32.1.2-jre'
+    }
+}
+
+publishing {
+    publications {
+        dependencies(MavenPublication) {}
+    }
+}
